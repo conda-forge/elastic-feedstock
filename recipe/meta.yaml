@@ -1,6 +1,6 @@
 {% set name = "elastic" %}
-{% set version = "4.0.29.7" %}
-{% set sha256 = "dbf6af1ccbd539370f10a49861e1021773259d76c3ef04acb948ba47c89acd83" %}
+{% set version = "4.0.30" %}
+{% set sha256 = "60ff70bc002eec53ce883ec3b74e9bd26b86e451f02db189aa0531eedacc3fb9" %}
 
 package:
   name: {{ name|lower }}
@@ -33,11 +33,12 @@ requirements:
 test:
   source_files:
     - test
+  requires:
+    - hypothesis
   imports:
     - elastic
   commands:
-    - cd test/
-    - python -m unittest discover -b 
+    - python -m unittest discover -s test -b 
 
 about:
   home: http://jochym.github.io/Elastic/
