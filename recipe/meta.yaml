@@ -13,10 +13,10 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 1
   script: python -m pip install --no-deps --ignore-installed . 
   entry_points:
-    - elastic = elastic.cli:cli
+          - elastic = elastic.cli.elastic:cli
 
 requirements:
   build:
