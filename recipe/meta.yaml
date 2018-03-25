@@ -1,6 +1,6 @@
 {% set name = "elastic" %}
-{% set version = "4.0.30.45" %}
-{% set sha256 = "46162f7ee3505ec13a8c14a9c008cc91296aa9fa0ca9363799120ac9342d88f9" %}
+{% set version = "5.0.2" %}
+{% set sha256 = "559462b27d26b88ab1d95f7de62f0d570d33171a21592cab1f7725d089d437e9" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 3
+  number: 0
   #script: python setup.py install --single-version-externally-managed --record record.txt
   script: python -m pip install --no-deps --ignore-installed . 
 
