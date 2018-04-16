@@ -1,6 +1,6 @@
 {% set name = "elastic" %}
-{% set version = "5.0.8" %}
-{% set sha256 = "3a616f0b192fea2a7da1333ae29bbb5116bcd2fcf9fa116ac9b29ad4d0e5206b" %}
+{% set version = "5.0.9" %}
+{% set sha256 = "3c10e712ea06a138241346a09d21a250f43e85fc52caa20a0383f39a2e2982f5" %}
 
 package:
   name: {{ name|lower }}
