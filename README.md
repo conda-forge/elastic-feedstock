@@ -20,12 +20,15 @@ on ab initio Calculations in Geosciences and used by some of my co-workers.
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/elastic-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/elastic-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/elastic-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/elastic-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/elastic/badges/version.svg)](https://anaconda.org/conda-forge/elastic)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/elastic/badges/downloads.svg)](https://anaconda.org/conda-forge/elastic)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-elastic-green.svg)](https://anaconda.org/conda-forge/elastic) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/elastic.svg)](https://anaconda.org/conda-forge/elastic) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/elastic.svg)](https://anaconda.org/conda-forge/elastic) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/elastic.svg)](https://anaconda.org/conda-forge/elastic) |
 
 Installing elastic
 ==================
