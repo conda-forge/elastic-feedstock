@@ -1,6 +1,6 @@
 {% set name = "elastic" %}
-{% set version = "5.1.0" %}
-{% set sha256 = "02fc130b563695fc9f3962a22e67809d3c4b3b9e78622e2f0d4522a7d9ceabf1" %}
+{% set version = "5.1.0.10" %}
+{% set sha256 = "df97ef46ef839288ee567844494a6209e76bb3bf49e2e83bc1a4f4df875303da" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed . 
   entry_points:
           - elastic = elastic.cli.elastic:cli
