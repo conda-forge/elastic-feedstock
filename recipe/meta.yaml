@@ -1,6 +1,6 @@
 {% set name = "elastic" %}
-{% set version = "5.1.0.17" %}
-{% set sha256 = "f1832da9cf09485f0e8edc20dc215e51c0260603a51c6f23adc27c2d2601f13f" %}
+{% set version = "5.2.2.3" %}
+{% set sha256 = "e2781e937c5b814afb78b4e7c7b7c5d055ada20ff25054ee8061a2fbd417b3ec" %}
 
 package:
   name: {{ name|lower }}
@@ -13,13 +13,13 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
-          - elastic = elastic.cli.elastic:cli
+    - elastic = elastic.cli.elastic:cli
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools
@@ -56,12 +56,12 @@ about:
   summary: 'Elastic is a set of python routines for calculation of elastic properties of crystals'
 
   description: |
-     Elastic is a set of python routines for calculation of elastic properties 
-     of crystals (elastic constants, equation of state, sound velocities, etc.). 
-     It is a third version of the code implemented as a extension to the ASE system. 
-     The code was a basis for some of my publications and was described briefly 
-     in these papers. The code was available to anyone, presented at the Workshop 
-     on ab initio Calculations in Geosciences and used by some of my co-workers. 
+    Elastic is a set of python routines for calculation of elastic properties 
+    of crystals (elastic constants, equation of state, sound velocities, etc.). 
+    It is a third version of the code implemented as a extension to the ASE system. 
+    The code was a basis for some of my publications and was described briefly 
+    in these papers. The code was available to anyone, presented at the Workshop 
+    on ab initio Calculations in Geosciences and used by some of my co-workers. 
   doc_url: http://elastic.readthedocs.io/
   dev_url: https://github.com/jochym/elastic
 
