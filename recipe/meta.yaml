@@ -1,6 +1,6 @@
 {% set name = "elastic" %}
-{% set version = "5.1.0.17" %}
-{% set sha256 = "f1832da9cf09485f0e8edc20dc215e51c0260603a51c6f23adc27c2d2601f13f" %}
+{% set version = "5.2.3.2" %}
+{% set sha256 = "feecafb2ed62d35a6a8fe2bcda6749aea4e2427353673accf1ba2db0108797eb" %}
 
 package:
   name: {{ name|lower }}
@@ -13,21 +13,21 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
-          - elastic = elastic.cli.elastic:cli
+    - elastic = elastic.cli.elastic:cli
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3.7
     - pip
     - setuptools
     - future
     - setuptools_scm
     - sphinx
   run:
-    - python
+    - python >=3.7
     - ase
     - numpy
     - scipy
@@ -50,18 +50,18 @@ test:
 
 about:
   home: http://jochym.github.io/Elastic/
-  license: GPL-3.0
+  license: GPL-3.0-or-later
   license_family: GPL3
   license_file: LICENSE
   summary: 'Elastic is a set of python routines for calculation of elastic properties of crystals'
 
   description: |
-     Elastic is a set of python routines for calculation of elastic properties 
-     of crystals (elastic constants, equation of state, sound velocities, etc.). 
-     It is a third version of the code implemented as a extension to the ASE system. 
-     The code was a basis for some of my publications and was described briefly 
-     in these papers. The code was available to anyone, presented at the Workshop 
-     on ab initio Calculations in Geosciences and used by some of my co-workers. 
+    Elastic is a set of python routines for calculation of elastic properties 
+    of crystals (elastic constants, equation of state, sound velocities, etc.). 
+    It is a third version of the code implemented as a extension to the ASE system. 
+    The code was a basis for some of my publications and was described briefly 
+    in these papers. The code was available to anyone, presented at the Workshop 
+    on ab initio Calculations in Geosciences and used by some of my co-workers. 
   doc_url: http://elastic.readthedocs.io/
   dev_url: https://github.com/jochym/elastic
 
