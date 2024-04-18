@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/elastic-feedsto
 
 Home: http://jochym.github.io/Elastic/
 
-Package license: GPL-3.0
+Package license: GPL-3.0-or-later
 
 Summary: Elastic is a set of python routines for calculation of elastic properties of crystals
 
