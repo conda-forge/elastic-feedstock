@@ -1,6 +1,6 @@
 {% set name = "elastic" %}
-{% set version = "5.2.3.8" %}
-{% set sha256 = "6514bf11570cfff425f49b2ea9d56b7318fec5768743cdcf8f9831370dd8f401" %}
+{% set version = "5.2.5.3" %}
+{% set sha256 = "961329d58f78e84ffa174d257c690c1f8e06761be78d93f88bf27e418f1c6fa9" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
