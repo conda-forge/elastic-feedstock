@@ -13,21 +13,21 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - elastic = elastic.cli.elastic:cli
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
     - future
     - setuptools_scm
     - sphinx
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - ase
     - numpy
     - scipy
@@ -41,6 +41,7 @@ test:
     - tests
   requires:
     - hypothesis
+    - python {{ python_min }}
   imports:
     - elastic
   commands:
